@@ -1,0 +1,159 @@
+<div class="row mt-5">
+    <!-- Registeration Form -->
+    <div class="col-md-7 col-lg-6 m-auto bg-dark " style="border-radius: 15px; border: solid #ffa500">
+        <form id="register_form" action="/register" method="post">
+
+            <div class="row">
+                <img class="mx-auto d-block mt-1 mb-1" src="/images/quickmesslogo.png" alt="" style="height:75px">
+                <% if (typeof error != "undefined" && error.status) { %>
+                    <div class="input-group">
+                        <div class="col text-center p-1 m-1" style="color: #ff0000">*** <%= error.message %> ***</div>
+                    </div>
+                <% } %>
+                <!-- Username -->
+                <div class="input-group col-lg-12 mb-4">
+                    <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-user text-muted"></i>
+                            </span>
+                    </div>
+                    <input id="username" type="text" name="username" placeholder="Username"
+                           class="form-control bg-white border-left-0 border-md" required>
+                </div>
+
+                <!-- Password -->
+                <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-lock text-muted"></i>
+                            </span>
+                    </div>
+                    <input id="password" type="password" name="password" placeholder="Password"
+                           class="form-control bg-white border-left-0 border-md" required>
+                </div>
+
+                <!-- Password Confirmation -->
+                <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-lock text-muted"></i>
+                            </span>
+                    </div>
+                    <input id="passwordConfirmation" type="password" name="passwordConfirmation"
+                           placeholder="Confirm Password" class="form-control bg-white border-left-0 border-md"
+                           required>
+                </div>
+
+                <!-- First Name -->
+                <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fas fa-file-signature"></i>
+                            </span>
+                    </div>
+                    <input id="firstName" type="text" name="firstname" placeholder="First Name"
+                           class="form-control bg-white border-left-0 border-md" required>
+                </div>
+
+                <!-- Last Name -->
+                <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fas fa-file-signature"></i>
+                            </span>
+                    </div>
+                    <input id="lastName" type="text" name="lastname" placeholder="Last Name"
+                           class="form-control bg-white border-left-0 border-md" required>
+                </div>
+
+                <!-- BirthDay -->
+                <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fas fa-table"></i>
+                            </span>
+                    </div>
+                    <input id="birthday" type="text" name="birthday" placeholder="Birthday"
+                           class="form-control bg-white border-left-0 border-md" onfocus="(this.type='date')"
+                           onfocusout="(this.type='text')" required>
+                </div>
+
+                <!-- Gender -->
+                <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fas fa-venus-mars"></i>
+                            </span>
+                    </div>
+                    <select class="form-control" name="gender" id="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <!-- Country -->
+                <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fas fa-globe"></i>
+                            </span>
+                    </div>
+                    <select class="form-control" name="country" id="country">
+                        <%
+                        for (let i = 0; i < countries.length; i++){ %>
+                            <option value="<%= countries[i].name %>"><%= countries[i].name %></option>
+                        <% } %>
+                    </select>
+                </div>
+
+                <!-- City -->
+                <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="far fa-building"></i>
+                            </span>
+                    </div>
+                    <select class="form-control" name="city" id="city">
+                        <%
+                        for (let i = 0; i < countries[0].cities.length; i++){ %>
+                            <option value="<%= countries[0].cities[i] %>"><%= countries[0].cities[i] %></option>
+                        <% } %>
+                    </select>
+                </div>
+
+                <!-- Email Address -->
+                <div class="input-group col-lg-12 mb-4">
+                    <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fas fa-envelope-square"></i>
+                            </span>
+                    </div>
+                    <input id="email" type="email" name="email" placeholder="Email"
+                           class="form-control bg-white border-left-0 border-md" required>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group col-lg-12 mx-auto mb-0">
+                    <button type="submit" class="btn btn-primary btn-block py-2">
+                        <span class="font-weight-bold" style="color: white">Create your account</span>
+                    </button>
+                </div>
+
+                <!-- Divider Text -->
+                <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                    <div class="border-bottom w-100 ml-5"></div>
+                    <span class="px-2 small font-weight-bold text-orange">OR</span>
+                    <div class="border-bottom w-100 mr-5"></div>
+                </div>
+
+                <!-- Already Registered -->
+                <div class="text-center w-100">
+                    <p class="text-orange font-weight-bold">Already Registered? <a href="/login"
+                                                                                   class="text-primary ml-2">Login</a>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

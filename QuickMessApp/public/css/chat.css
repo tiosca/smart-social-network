@@ -1,0 +1,367 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-chat {
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #ff004c 0%, #000010 100%);
+
+}
+
+.search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 20px;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 200px;
+    caret-color:red;
+    transition: width 0.4s linear;
+}
+
+.form-control {
+    background-color: blue;
+}
+
+.bg-orange {
+    background-color: blue;
+}
+
+/*.resizeable-textarea {*/
+
+/*    resize: vertical;*/
+/*    height: 200px;*/
+/*}*/
+
+.chat {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 750px;
+}
+
+.card {
+    height: 100%;
+    border-radius: 15px ;
+    background-color: rgba(0, 0, 0, 0.4) ;
+}
+
+
+
+.contacts_body {
+    padding: 0.75rem 0 ;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+.msg_card_body {
+    height: 500px;
+    overflow-y: auto;
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0 ;
+    border-bottom: 0 ;
+}
+
+.card-footer {
+    border-radius: 0 0 15px 15px ;
+    border-top: 0 ;
+}
+
+.container {
+    align-content: center;
+}
+
+.search {
+    border-radius: 15px 0 0 15px ;
+    background-color: rgba(0, 0, 0, 0.3) ;
+    border: 0 ;
+    color: white ;
+}
+
+.search:focus {
+    box-shadow: none ;
+    outline: 0 ;
+}
+
+.type_msg {
+    background-color: rgba(0, 0, 0, 0.3) ;
+    border: 0 ;
+    color: white ;
+    height: 60px ;
+    overflow-y: auto;
+}
+
+.type_msg:focus {
+    box-shadow: none ;
+    outline: 0 ;
+}
+
+.attach_btn {
+    border-radius: 15px 0 0 15px ;
+    background-color: rgba(0, 0, 0, 0.3) ;
+    border: 0 ;
+    color: white ;
+    cursor: pointer;
+}
+
+.send_btn {
+    border-radius: 0 15px 15px 0 ;
+    background-color: rgba(0, 0, 0, 0.3) ;
+    border: 0 ;
+    color: white ;
+    cursor: pointer;
+}
+
+.search_btn {
+    border-radius: 0 15px 15px 0 ;
+    background-color: rgba(0, 0, 0, 0.3) ;
+    border: 0 ;
+    color: white ;
+    cursor: pointer;
+}
+
+.contacts {
+    list-style: none;
+    padding: 0;
+}
+
+.contacts li {
+    width: 100% ;
+    padding: 5px 10px;
+    margin-bottom: 15px ;
+}
+
+.active {
+    background-color: rgba(0, 255, 196, 0.3);
+    border-radius: 20px;
+}
+
+.user_img {
+    height: 70px;
+    width: 70px;
+    border: 2px solid #f5f6fa;
+
+}
+
+.user_img_msg {
+    height: 40px;
+    width: 40px;
+    border: 2px solid #f5f6fa;
+
+}
+
+.img_cont {
+    position: relative;
+    height: 70px;
+    width: 70px;
+}
+
+.img_cont_msg {
+    height: 40px;
+    width: 40px;
+}
+
+.online_icon {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #4cd137;
+    border-radius: 50%;
+    bottom: 0.2em;
+    right: 0.4em;
+    border: 2px solid white;
+}
+
+.offline {
+    background-color: #c23616 ;
+}
+
+.user_info {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+    /* Set a fixed width for the container */
+    width: 200px;
+    /* Enable text overflow and hide any overflowing content */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.user_info span {
+    font-size: 20px;
+    color: white;
+}
+
+.user_info p, .user_info p span {
+    font-size: 12px;
+    color: rgb(243, 248, 13);
+}
+
+.video_cam {
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.video_cam span {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.msg_cotainer {
+    font-size: large;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    margin-right: 50px;
+    border-radius: 25px;
+    background-color: #82ccdd;
+    padding: 10px;
+    position: relative;
+}
+
+.msg_cotainer_send {
+    font-size: large;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    margin-left: 50px;
+    border-radius: 25px;
+    background-color: #78e08f;
+    padding: 10px;
+    position: relative;
+}
+
+.msg_time {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    color: #ff5900 !important;
+    font-size: 10px;
+    width: 100px;
+}
+
+.msg_time_send {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    color: #0022ff !important;
+    font-size: 10px;
+    width: 100px;
+}
+
+.msg_head {
+    position: relative;
+}
+
+#action_menu_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.action_menu {
+    z-index: 1;
+    position: absolute;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 15px;
+    top: 30px;
+    right: 15px;
+    display: none;
+}
+
+.action_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.action_menu ul li {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+}
+
+.action_menu ul li i {
+    padding-right: 10px;
+}
+
+.action_menu ul li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#message-box {
+    height: auto;
+}
+
+#message_inbox {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*.contacts_card {*/
+/*    width: 250px;*/
+/*}*/
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9999;
+}
+
+#loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width: 576px) {
+    .contacts_card {
+        margin-bottom: 15px ;
+    }
+}
+

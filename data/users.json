@@ -1,0 +1,412 @@
+[{
+  "_id": {
+    "$oid": "5ed2abb399304e3208dd8128"
+  },
+  "posts": [],
+  "friends": [
+    {
+      "$oid": "5ed3df67563fad2fbcbb6b60"
+    }
+  ],
+  "username": "pedro",
+  "password": "ee5cd7d5d96c8874117891b2c92a036f96918e66c102bc698ae77542c186f981",
+  "email": "pedro@pedro.com",
+  "birthDay": {
+    "$date": "1980-02-29T00:00:00Z"
+  },
+  "firstName": "Pedro",
+  "lastName": "Del-Castillio",
+  "role": "user",
+  "gender": "male",
+  "city": "Madrid",
+  "country": "Spain",
+  "status": "offline",
+  "profileImagePath": "images/pedro.jpg",
+  "friendRequests": [],
+  "friendRequestsSentByMe": []
+},{
+  "_id": {
+    "$oid": "5ed2b25f99304e3208dd812a"
+  },
+  "posts": [],
+  "friends": [
+    {
+      "$oid": "5ed7058b4a3f8d6cb0bb0f69"
+    },
+    {
+      "$oid": "5ed2ab0099304e3208dd8127"
+    },
+    {
+      "$oid": "5ed6ef209e9c6d5f8825cf98"
+    },
+    {
+      "$oid": "5ed6ec1e81c767272412f0cb"
+    },
+    {
+      "$oid": "5ed6421838a90d453073e570"
+    },
+    {
+      "$oid": "5ed6ee589e9c6d5f8825cf96"
+    }
+  ],
+  "username": "ricardo",
+  "password": "65304dac3823069673aa9d3b90dcb9f44938e2d12f58509addc915d08922b64b",
+  "email": "ricardo@gmail.com",
+  "birthDay": {
+    "$date": "1985-12-25T00:00:00Z"
+  },
+  "firstName": "Ricardo",
+  "lastName": "Sanchez",
+  "role": "user",
+  "gender": "male",
+  "city": "Fortaleza",
+  "country": "Brazil",
+  "status": "offline",
+  "profileImagePath": "images/ricardo.png",
+  "friendRequests": [
+    {
+      "$oid": "5ed6f4b2bf8558399871c383"
+    },
+    {
+      "$oid": "5ed6f66ea863b22eb0ac40dd"
+    },
+    {
+      "$oid": "5ed704d64a3f8d6cb0bb0f67"
+    }
+  ],
+  "friendRequestsSentByMe": []
+},{
+  "_id": {
+    "$oid": "5ed704d64a3f8d6cb0bb0f67"
+  },
+  "posts": [
+    {
+      "_id": {
+        "$oid": "5ed7131aacec6c68584c279c"
+      },
+      "message": "Father, everyone is starting to pay attention to me again because of the new millennium. I-I'm kinda making a comeback!",
+      "owner": {
+        "$oid": "5ed704d64a3f8d6cb0bb0f67"
+      },
+      "date": {
+        "$date": "2020-06-03T03:03:54.594Z"
+      }
+    }
+  ],
+  "friends": [
+    {
+      "$oid": "5ed705214a3f8d6cb0bb0f68"
+    },
+    {
+      "$oid": "5ed70f0dacec6c68584c278c"
+    },
+    {
+      "$oid": "5ed6ef209e9c6d5f8825cf98"
+    },
+    {
+      "$oid": "5ed7058b4a3f8d6cb0bb0f69"
+    }
+  ],
+  "friendRequests": [],
+  "friendRequestsSentByMe": [
+    {
+      "$oid": "5ed2b25f99304e3208dd812a"
+    }
+  ],
+  "username": "jesus",
+  "password": "a54e71f0e17f5aaf7946e66ab42cf3b1fd4e61d60581736c9f0eb1c3f794eb7c",
+  "email": "jesus@god.com",
+  "birthDay": {
+    "$date": {
+      "$numberLong": "-62119958400000"
+    }
+  },
+  "firstName": "Jesus",
+  "lastName": "Christ",
+  "role": "user",
+  "gender": "male",
+  "city": "Bucharest",
+  "country": "Romania",
+  "status": "offline",
+  "profileImagePath": "images/jesus.png"
+},{
+  "_id": {
+    "$oid": "5ed705214a3f8d6cb0bb0f68"
+  },
+  "posts": [
+    {
+      "_id": {
+        "$oid": "5ed70fc0acec6c68584c278d"
+      },
+      "message": "I am evil, so please treat pe seriously!",
+      "owner": {
+        "$oid": "5ed705214a3f8d6cb0bb0f68"
+      },
+      "date": {
+        "$date": "2020-06-03T02:49:36.617Z"
+      }
+    }
+  ],
+  "friends": [
+    {
+      "$oid": "5ed7058b4a3f8d6cb0bb0f69"
+    },
+    {
+      "$oid": "5ed70f0dacec6c68584c278c"
+    },
+    {
+      "$oid": "5ed704d64a3f8d6cb0bb0f67"
+    },
+    {
+      "$oid": "5ed6f93da863b22eb0ac40df"
+    },
+    {
+      "$oid": "5ed3df67563fad2fbcbb6b60"
+    },
+    {
+      "$oid": "5ed6ee589e9c6d5f8825cf96"
+    }
+  ],
+  "friendRequests": [
+    {
+      "$oid": "5ed6f66ea863b22eb0ac40dd"
+    }
+  ],
+  "friendRequestsSentByMe": [],
+  "username": "bunny",
+  "password": "e9c43c5dcf143fdc4173b5a9d62dfabcd704d436aad8b2034df993f44ee49e2b",
+  "email": "bunny@evil.com",
+  "birthDay": {
+    "$date": "2012-11-03T00:00:00Z"
+  },
+  "firstName": "Bunny",
+  "lastName": "The-Evil",
+  "role": "user",
+  "gender": "male",
+  "city": "Iași",
+  "country": "Romania",
+  "status": "offline",
+  "profileImagePath": "images/bunny.png"
+},{
+  "_id": {
+    "$oid": "5ed7058b4a3f8d6cb0bb0f69"
+  },
+  "posts": [
+    {
+      "_id": {
+        "$oid": "5ed706b24a3f8d6cb0bb0f76"
+      },
+      "message": "Pika pi!",
+      "owner": {
+        "$oid": "5ed7058b4a3f8d6cb0bb0f69"
+      },
+      "date": {
+        "$date": "2020-06-03T02:10:58.696Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5ed718add7a31655d003fa1a"
+      },
+      "message": "Pikachu!",
+      "owner": {
+        "$oid": "5ed7058b4a3f8d6cb0bb0f69"
+      },
+      "date": {
+        "$date": "2020-06-03T03:27:41.513Z"
+      }
+    }
+  ],
+  "friends": [
+    {
+      "$oid": "5ed705214a3f8d6cb0bb0f68"
+    },
+    {
+      "$oid": "5ed2b25f99304e3208dd812a"
+    },
+    {
+      "$oid": "5ed2ab0099304e3208dd8127"
+    },
+    {
+      "$oid": "5ed4059c7c133519f04a974d"
+    },
+    {
+      "$oid": "5ed70f0dacec6c68584c278c"
+    },
+    {
+      "$oid": "5ed3e199563fad2fbcbb6b66"
+    },
+    {
+      "$oid": "5ed6ec1e81c767272412f0cb"
+    },
+    {
+      "$oid": "5ed7104cacec6c68584c278e"
+    },
+    {
+      "$oid": "5ed6ee589e9c6d5f8825cf96"
+    },
+    {
+      "$oid": "5ed704d64a3f8d6cb0bb0f67"
+    }
+  ],
+  "friendRequests": [],
+  "friendRequestsSentByMe": [
+    {
+      "$oid": "5ed3df67563fad2fbcbb6b60"
+    }
+  ],
+  "username": "pikachu",
+  "password": "43999461d22f67840fcd9b8824293eaa4f18146e57b2c651bcd925e3b3e4e429",
+  "email": "pikachu@gmail.com",
+  "birthDay": {
+    "$date": "2002-10-24T00:00:00Z"
+  },
+  "firstName": "Pikachu",
+  "lastName": "Pikachu",
+  "role": "user",
+  "gender": "male",
+  "city": "Ungheni",
+  "country": "Moldova",
+  "status": "offline",
+  "profileImagePath": "images/pikachu.png"
+},{
+  "_id": {
+    "$oid": "5ed70f0dacec6c68584c278c"
+  },
+  "posts": [
+    {
+      "_id": {
+        "$oid": "5ed76a0cea7d4a3a00c02103"
+      },
+      "message": "Oh, my dear Bucefal, I miss you so much. I can't find your profile page ...",
+      "owner": {
+        "$oid": "5ed70f0dacec6c68584c278c"
+      },
+      "date": {
+        "$date": "2020-06-03T09:14:52.380Z"
+      }
+    }
+  ],
+  "friends": [
+    {
+      "$oid": "5ed705214a3f8d6cb0bb0f68"
+    },
+    {
+      "$oid": "5ed4059c7c133519f04a974d"
+    },
+    {
+      "$oid": "5ed7058b4a3f8d6cb0bb0f69"
+    },
+    {
+      "$oid": "5ed704d64a3f8d6cb0bb0f67"
+    },
+    {
+      "$oid": "5ed2ab0099304e3208dd8127"
+    },
+    {
+      "$oid": "5ed6f93da863b22eb0ac40df"
+    },
+    {
+      "$oid": "5ed3e199563fad2fbcbb6b66"
+    },
+    {
+      "$oid": "5ed6ee589e9c6d5f8825cf96"
+    }
+  ],
+  "friendRequests": [],
+  "friendRequestsSentByMe": [
+    {
+      "$oid": "5ed3df67563fad2fbcbb6b60"
+    },
+    {
+      "$oid": "5ed3da1d563fad2fbcbb6b5e"
+    },
+    {
+      "$oid": "5ed63b0f38a90d453073e56e"
+    }
+  ],
+  "username": "macedon",
+  "password": "9744ef537e67720014db6709cd7f5821e10ea496df158ff926f3de83f0f2214f",
+  "email": "macedon@greece.com",
+  "birthDay": {
+    "$date": {
+      "$numberLong": "-51834902400000"
+    }
+  },
+  "firstName": "Alexander",
+  "lastName": "Macedon",
+  "role": "user",
+  "gender": "male",
+  "city": "Pella",
+  "country": "Greece",
+  "status": "offline",
+  "profileImagePath": "images/macedon.png"
+},{
+  "_id": {
+    "$oid": "5ed7104cacec6c68584c278e"
+  },
+  "posts": [
+    {
+      "_id": {
+        "$oid": "5ed710eeacec6c68584c278f"
+      },
+      "message": "Alexander, I miss you ...",
+      "owner": {
+        "$oid": "5ed7104cacec6c68584c278e"
+      },
+      "date": {
+        "$date": "2020-06-03T02:54:38.401Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5ed71124acec6c68584c2791"
+      },
+      "message": "We had a dream, together!",
+      "owner": {
+        "$oid": "5ed7104cacec6c68584c278e"
+      },
+      "date": {
+        "$date": "2020-06-03T02:55:32.249Z"
+      }
+    }
+  ],
+  "friends": [
+    {
+      "$oid": "5ed2ab0099304e3208dd8127"
+    },
+    {
+      "$oid": "5ed6421838a90d453073e570"
+    },
+    {
+      "$oid": "5ed7058b4a3f8d6cb0bb0f69"
+    },
+    {
+      "$oid": "5ed63b0f38a90d453073e56e"
+    },
+    {
+      "$oid": "5ed3df67563fad2fbcbb6b60"
+    },
+    {
+      "$oid": "5ed6ee589e9c6d5f8825cf96"
+    }
+  ],
+  "friendRequests": [],
+  "friendRequestsSentByMe": [],
+  "username": "bucefal",
+  "password": "b9a477e0f7da0cac99b9aa743bf01259f7ecca3a7cdfa84d88f8daa80eaf0fad",
+  "email": "bucefal@greece.com",
+  "birthDay": {
+    "$date": {
+      "$numberLong": "-51866438400000"
+    }
+  },
+  "firstName": "Bucefal",
+  "lastName": "The-Great",
+  "role": "user",
+  "gender": "male",
+  "city": "Athens",
+  "country": "Greece",
+  "status": "offline",
+  "profileImagePath": "images/bucefal.png"
+}]

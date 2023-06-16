@@ -1,0 +1,104 @@
+body{
+    color: black;
+}
+
+html, body {
+    height: 100%;
+    /* background-image: radial-gradient( circle 1224px at 10.6% 8.8%,  rgba(255,255,255,1) 0%, rgb(238, 223, 204) 100.2% ); */
+    background-image: radial-gradient( circle 1224px at 10.6% 8.8%, #605e5e 0%, rgba(255, 255, 255, 0) 100.2% );
+}
+
+footer, nav {
+    background: black;
+}
+
+li a:hover {
+    background: rgb(255, 145, 0);
+    color: white;
+}
+li a {
+    color: orange;
+}
+
+.title {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 2rem;
+    color: red;
+    text-align: center;
+}
+
+tr, td{
+    font-weight: bold;
+}
+
+input[type='radio']:after {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    background-color: #ffa500;
+}
+
+#container {
+    min-height: 90%;
+}
+
+#main {
+    overflow: auto;
+}
+
+
+nav ul li a{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.2rem;
+}
+
+.text-orange {
+    color: orange !important;
+}
+
+.card{
+    border-color: #a09b9b !important;
+}
+
+
+.card-text{
+    font-weight: bold;
+}
+
+#profile_age, #profile_email, #profile_city, #profile_country{
+    color: #79008e;
+}
+
+h1{
+    background: -webkit-linear-gradient(45deg, #9f0097, #000000 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-tabs .nav-item .nav-link {
+    border-radius: 25px;
+}
+
+#left_box{
+    border-radius: 25px;
+}
+
+#right_box{
+    border-radius: 12px;
+}
+
+#chat_container{
+    padding-top: 0px!important;
+}
+

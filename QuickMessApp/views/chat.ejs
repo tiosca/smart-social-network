@@ -1,0 +1,168 @@
+
+<div class="container-fluid h-100 pt-5 w-100">
+    <div class="row justify-content-center h-100" style="margin-left: -75px; margin-right: -75px">
+        <div id="left_box" class="card col-12 col-lg-5 col-xl-1 col-md-3 col-sm-12 mx-3 mb-5 align-self-start profile_container px-2 ">
+<!--             style="margin-left: -280px!important; margin-right: 0!important;">-->
+            <% if (typeof user != "undefined"){ %>
+                <img class="card-img-top mt-3" id="profile_photo" src="<%= user.profileImagePath %>"
+                     alt="images/male.png">
+            <% } else { %>
+                <img class="card-img-top mt-3" id="profile_photo" src="images/male.png" alt="images/male.png">
+            <% } %>
+            <div class="card-body">
+
+                <% if (typeof user != "undefined") { %>
+                    <h4 id="profile_name" class="card-title text-center"><%= user.firstName %> <%= user.lastName %></h4>
+                    <p class="card-text">Age: <span id="profile_age"><%= user.age %></span></p>
+                    <p class="card-text">Email: <span id="profile_email"><%= user.email %></span></p>
+                    <p class="card-text">Country: <span id="profile_country"><%= user.country %></span></p>
+                    <p class="card-text">City: <span id="profile_city"><%= user.city %></span></p>
+                <% } else { %>
+                    <h2 id="profile_name" class="card-title">Ricardo Sanchez</h2>
+                    <p class="card-text">Age: <span id="profile_age"></span></p>
+                    <p class="card-text">Email: <span id="profile_email"></span></p>
+                    <p class="card-text">Country: <span id="profile_country"></span></p>
+                    <p class="card-text">City: <span id="profile_city"></span></p>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-xl-2 chat">
+            <div class="card mb-sm-3 mb-md-0 contacts_card">
+                <div class="card-header bg-dark">
+<!--                    <div class="input-group">-->
+<!--                        <input id="search_chat_button_value" type="text" placeholder="Search..." name=""-->
+<!--                               class="form-control search">-->
+<!--                        <div class="input-group-prepend bg-orange">-->
+<!--                            <span id="search_chat_button" class="input-group-text search_btn "><i-->
+<!--                                        class="fas fa-search "></i></span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+                    <div class="searchbar">
+                        <input id="search_chat_button_value" class="search_input" type="text" name="" placeholder="Search for friends">
+                        <a id="search_chat_button" class="search_icon"><i class="fas fa-search"></i></a>
+                    </div>
+
+                </div>
+                <div class="card-body contacts_body bg-chat">
+                    <ul id="contacts" class="contacts">
+                        <% if (typeof friends != "undefined" && typeof currentFriend != "undefined")
+                        for (let i = 0 ;i < friends.length; i++){
+                        if (friends[i].id === currentFriend.id){ %>
+                        <li class="active change_chat" data-value="<%= friends[i].id %>">
+                            <% } else { %>
+                        <li class="change_chat" data-value="<%= friends[i].id %>">
+                            <% } %>
+                            <div class="d-flex bd-highlight">
+                                <div class="img_cont">
+                                    <img id="<%= friends[i].id %>" src="<%= friends[i].profileImagePath %>"
+                                         class="rounded-circle user_img">
+                                    <span class="online_icon <%= friends[i].status %>"></span>
+                                </div>
+                                <div class="user_info">
+                                    <input class="name <%= friends[i].id %>" value="<%= friends[i].firstName %>"
+                                           hidden/>
+                                    <input class="status <%= friends[i].id %>" value="<%= friends[i].status %>"
+                                           hidden/>
+                                    <span><%= friends[i].firstName %> <%= friends[i].lastName %></span>
+                                    <p><%= friends[i].firstName %> is <%= friends[i].status %></p>
+                                </div>
+                            </div>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+                <div class="card-footer bg-dark"></div>
+            </div>
+        </div>
+        <div id="chat_box" class="col-md-12 col-lg-12 col-xl-8 chat ">
+            <div class="card ">
+                <div class="card-header msg_head bg-dark">
+                    <div class="d-flex bd-highlight">
+                        <% if (typeof currentFriend != "undefined") { %>
+                            <div class="img_cont">
+                                <img id="currentFriendImage" src="<%= currentFriend.profileImagePath %>"
+                                     class="rounded-circle user_img">
+                                <span id="friend_online_status" class="online_icon <%= currentFriend.status %>"></span>
+                            </div>
+                            <div class="user_info">
+                                <span id="friend_firstname">Chat with <%= currentFriend.firstName %></span>
+                                <p>
+                                    <span id="friend_number_of_messages"><%= (typeof messages != "undefined") ? messages.length : 0 %></span>
+                                    Messages</p>
+                            </div>
+                        <% } %>
+                    </div>
+                    <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
+                    <div class="action_menu">
+                        <ul>
+                            <li><i class="fas fa-user-circle"></i> View profile</li>
+                            <li><i class="fas fa-users"></i> Add to close friends</li>
+                            <li><i class="fas fa-plus"></i> Add to group</li>
+                            <li><i class="fas fa-ban"></i> Block</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="message_inbox" class="card-body msg_card_body">
+                    <% if (typeof messages != "undefined" && typeof user != "undefined" && typeof currentFriend != "undefined")
+                    for (let i = 0; i < messages.length; i++){
+
+                    if (messages[i].sender.toString() === user.id){ %>
+                        <div class="d-flex justify-content-start mb-4 ml-5">
+                            <div class="img_cont_msg">
+                                <img src="<%= user.profileImagePath %>" class="rounded-circle user_img_msg">
+                            </div>
+                            <div class="msg_cotainer">
+                                <%= messages[i].data %>
+                                <span class="msg_time"><%= moment(messages[i].date).utcOffset(2).format('YYYY-MM-DD, HH:mm:ss') %></span>
+                            </div>
+                        </div>
+                    <% } else { %>
+                        <div class="d-flex justify-content-end mb-4 mr-5">
+                            <div class="msg_cotainer_send">
+                                <%= messages[i].data %>
+                                <span class="msg_time_send"><%= moment(messages[i].date).utcOffset(2).format('YYYY-MM-DD, HH:mm:ss') %></span>
+                            </div>
+                            <div class="img_cont_msg">
+                                <img src="<%= currentFriend.profileImagePath %>" class="rounded-circle user_img_msg">
+                            </div>
+                        </div>
+                    <% }} %>
+                </div>
+                <div id="loading-overlay">
+                    <div id="loading-spinner"></div>
+                </div>
+                <div class="card-footer m-0 bg-dark">
+                    <form id="message_send_form">
+
+                        <div class="input-group">
+                            <% if (typeof user != "undefined" && typeof currentFriend != "undefined"){ %>
+
+                                <input id="chat_user_id" value="<%= user.id %>" hidden/>
+                                <input id="chat_friend_id" value="<%= currentFriend.id %>" hidden/>
+                                <input id="chat_user_photo" value="<%= user.profileImagePath %>" hidden/>
+                                <textarea id="message" name="" class="form-control type_msg"
+                                          placeholder="Type your message..."></textarea>
+
+                            <div class="input-group-append">
+                                <button id="message_translate" style="width: 30px;">T</button>
+                                <button id="message_shrink" style="width: 30px;">-</button>
+                                <button id="message_extend" style="width: 30px;">+</button>
+                                <button id="message_send" type=submit class="input-group-text send_btn"><i
+                                            class="fas fa-location-arrow"></i></button>
+                                <% } else { %>
+                                    <textarea class="form-control type_msg" placeholder="Type your message..."
+                                              disabled></textarea>
+                                    <div class="input-group-append">
+                                        <button class="input-group-text send_btn" disabled><i
+                                                    class="fas fa-location-arrow"></i></button>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

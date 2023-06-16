@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Romania",
+    "cities": ["Iași", "Bucharest", "Vaslui", "Timișoara", "Suceava", "Sibiu"]
+  },
+  {
+    "name": "Moldova",
+    "cities": ["Ungheni", "Chișinău", "Ialoveni"]
+  },
+  {
+    "name": "Spain",
+    "cities": ["Madrid", "Barcelona", "Jaen"]
+  },
+  {
+    "name": "Brazil",
+    "cities": ["Rio de Janeiro", "Fortaleza"]
+  },
+  {
+    "name": "Russia",
+    "cities": ["Moscow", "Saint Petersburg"]
+  },
+  {
+    "name": "Greece",
+    "cities": ["Pella", "Athens"]
+  },
+  {
+    "name": "USA",
+    "cities": ["Los Angeles", "New York"]
+  }
+]
