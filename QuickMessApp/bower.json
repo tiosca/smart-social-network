@@ -3,14 +3,9 @@
   "description": "QuickMess",
   "main": "app.js",
   "authors": [
-    "enaki"
+    "tiosca"
   ],
-  "license": "ISC",
-  "keywords": [
-    "chat",
-    "online"
-  ],
-  "homepage": "https://github.com/enaky/QuickMess",
+  "homepage": "not yet",
   "dependencies": {
     "crypto-js": "^4.0.0",
     "moment": "^2.29.0"

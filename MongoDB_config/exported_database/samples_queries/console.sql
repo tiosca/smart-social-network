@@ -3,8 +3,7 @@ use quickMess
 
 
 //_-----------------------USERS
-db.users.findOne({username: "enaki1"})
-db.users.deleteOne({username: "catalin"})
+db.users.findOne({username: "tiosca"})
 
 db.users.update(
    { username: "artur" },
