@@ -27,7 +27,7 @@ module.exports = {
     },
     insertChat: async function (user_1, user_2) {
         const options = {
-            method: "DELETE",
+            method: "POST",
             body: JSON.stringify({
                 "userId1": user_1,
                 "userId2": user_2,
