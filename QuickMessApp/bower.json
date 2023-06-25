@@ -5,7 +5,7 @@
   "authors": [
     "tiosca"
   ],
-  "homepage": "not yet",
+  "homepage": "not yet available",
   "dependencies": {
     "crypto-js": "^4.0.0",
     "moment": "^2.29.0"
