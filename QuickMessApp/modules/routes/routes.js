@@ -512,7 +512,7 @@ module.exports = {
                     enable_searchbar_css: true,
                     users: data["friends"],
                     enable_people_css: true,
-                    friendRequests: data["friend_requests"]
+                    friendRequests: data["friend_requests"],
                 }
                 res.send(data_to_send);
             }

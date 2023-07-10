@@ -1,30 +1,32 @@
 function add_friend_in_friends_bar(users, user_id) {
-    let html_text
-    html_text = '<div class="row justify-content-center">';
+    let html_text = '<div class="row justify-content-center">';
     console.log("USER ID after search in friends: " + user_id);
-    console.log("Users founds: " + JSON.stringify(users));
-    if (typeof (users) != "undefined") {
+    console.log("Users found: " + JSON.stringify(users));
+
+    if (typeof(users) != "undefined" && users.length > 0) {
         for (let i = 0; i < users.length; i++) {
             html_text += '<div class="card p-1 mx-3 col-lg-4 col-md-5 col-sm-6">';
-
             html_text += '<img class="card-img-top embed-responsive-16by9" src="' + users[i].profileImagePath + '" alt="Card image">';
-
             html_text += ' <div class="card-body text-center">';
             html_text += ' <h6 class="card-title">' + users[i].firstName + ' ' + users[i].lastName + '</h6>';
             html_text += ' <div class="card-footer">';
             html_text += ' <form action="/remove-friend" method="post">';
             html_text += ' <input type="hidden" name="friend_id" value="' + users[i].id + '">';
-            if (typeof (user_id) != "undefined") {
+            if (typeof(user_id) != "undefined") {
                 html_text += ' <input type="hidden" name="user_id" value="' + user_id + '">';
             }
             html_text += ' <button type="submit" name="friend-operation" value="remove" class="btn btn-danger btn-block">Remove Friend</button>';
             html_text += ' <button type="submit" name="friend-operation" value="view" class="btn btn-warning btn-block">View</button>';
-            html_text += ' </form>'
-            html_text += ' </div>'
-            html_text += ' </div>'
-            html_text += ' </div>'
+            html_text += ' </form>';
+            html_text += ' </div>';
+            html_text += ' </div>';
+            html_text += ' </div>';
         }
+    } else {
+        let inputValue = $("#friend_search_value").val();
+        html_text += '<p>No friends named "' + inputValue + '" found.</p>'; // Add message when no friends are found
     }
+
     html_text += ' </div>';
     $("#users").html(html_text);
 }

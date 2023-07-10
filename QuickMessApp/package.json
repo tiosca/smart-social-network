@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HDR-Organization/tema-de-casa-enaky.git"
+    "url": "https://github.com/tiosca/smart-social-network"
   },
   "keywords": [
     "chat",
-    "online"
+    "social network"
   ],
-  "author": "enaki",
-  "license": "ISC",
+  "author": "tiosca",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/HDR-Organization/tema-de-casa-enaky/issues"
+    "url": "none"
   },
-  "homepage": "https://github.com/HDR-Organization/tema-de-casa-enaky#readme",
+  "homepage": "not yet available",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",

@@ -212,18 +212,6 @@ body, html {
     color: rgb(243, 248, 13);
 }
 
-.video_cam {
-    margin-left: 50px;
-    margin-top: 5px;
-}
-
-.video_cam span {
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
 .msg_cotainer {
     font-size: large;
     margin-top: auto;
@@ -252,7 +240,7 @@ body, html {
     position: absolute;
     left: 0;
     bottom: -15px;
-    color: #ff5900 !important;
+    color: #ff0015 !important;
     font-size: 10px;
     width: 100px;
 }
@@ -268,6 +256,10 @@ body, html {
 
 .msg_head {
     position: relative;
+}
+
+#messages_container{
+    padding-top: 0!important;
 }
 
 #action_menu_btn {

@@ -293,7 +293,7 @@ module.exports = {
 
     },
 
-    getUsersBasicInfoByMultipleIds: async function (ids) {
+     getUsersBasicInfoByMultipleIds: async function (ids) {
         return new Promise((resolve, reject) => {
             if (ids.length === 0){
                 resolve([]);

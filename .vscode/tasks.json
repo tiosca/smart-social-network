@@ -64,7 +64,7 @@
             "dockerRun": {
                 "env": {
                     "DEBUG": "*",
-                    "NODE_ENV": "development"
+                    "NODE_ENV": "Development"
                 }
             },
             "node": {

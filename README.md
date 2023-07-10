@@ -1,7 +1,7 @@
 # QuickMess
 
 This project represents a social network application written in node.js.
-Database used is mongoDB. 
+Database used is MongoDB. 
 
 #### Notes
 * Passwords are stored encrypted in the database (encryption realised on client side)
@@ -38,8 +38,8 @@ Passwords coincide with usernames and [images names].
 1. Install [mongoDb](https://docs.mongodb.com/manual/administration/install-community/)
 2. Install [mongoDb Compass](https://www.mongodb.com/products/compass) in order to visualize and load data. After installed:
     * Create a database called quickMess
-    * Create a collection called users and load data from [users.json]
-    * Create a collection called chats and load data from [chats.json]
+    * Create a collection called users and load data from [data->users.json]
+    * Create a collection called chats and load data from [data->chats.json]
 
 ### Frontend (Node.JS)
 1. Make sure you have [node.js](https://nodejs.org/en/) installed
@@ -49,4 +49,6 @@ Passwords coincide with usernames and [images names].
     * ```bower install``` in order to install the dependencies to the client  (moment and crypto-js).
     * ```node app.js``` in order to start the project
 
-## Docker Deployment todo
+## Docker Deployment 
+
+To do

@@ -15,7 +15,7 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello world!");
+app.MapGet("/", () => "Back-end is running!");
 app.MapControllers();
 
 app.Run();

@@ -6,11 +6,6 @@ use quickMess
 db.users.findOne({username: "tiosca"})
 
 db.users.update(
-   { username: "artur" },
-   { $set: { profileImagePath: "images/artur.jpeg" } }
-)
-
-db.users.update(
    { username: "bucefal" },
    { $set: { profileImagePath: "images/bucefal.png" } }
 )

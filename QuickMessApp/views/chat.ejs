@@ -1,5 +1,5 @@
 
-<div class="container-fluid h-100 pt-5 w-100">
+<div id="messages_container" class="container-fluid h-100 pt-5 w-100">
     <div class="row justify-content-center h-100" >
         <div id="left_box" class="card col-12 col-lg-5 col-xl-1 col-md-3 col-sm-12 mx-3 mb-5 align-self-start profile_container px-2 ">
 <!--             style="margin-left: -280px!important; margin-right: 0!important;">-->
@@ -29,20 +29,10 @@
         <div class="col-md-4 col-lg-4 col-xl-2 chat">
             <div class="card mb-sm-3 mb-md-0 contacts_card">
                 <div class="card-header bg-dark">
-<!--                    <div class="input-group">-->
-<!--                        <input id="search_chat_button_value" type="text" placeholder="Search..." name=""-->
-<!--                               class="form-control search">-->
-<!--                        <div class="input-group-prepend bg-orange">-->
-<!--                            <span id="search_chat_button" class="input-group-text search_btn "><i-->
-<!--                                        class="fas fa-search "></i></span>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
                     <div class="searchbar">
                         <input id="search_chat_button_value" class="search_input" type="text" name="" placeholder="Search for friends">
                         <a id="search_chat_button" class="search_icon"><i class="fas fa-search"></i></a>
                     </div>
-
                 </div>
                 <div class="card-body contacts_body bg-chat">
                     <ul id="contacts" class="contacts">
@@ -93,15 +83,15 @@
                             </div>
                         <% } %>
                     </div>
-                    <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
-                    <div class="action_menu">
-                        <ul>
-                            <li><i class="fas fa-user-circle"></i> View profile</li>
-                            <li><i class="fas fa-users"></i> Add to close friends</li>
-                            <li><i class="fas fa-plus"></i> Add to group</li>
-                            <li><i class="fas fa-ban"></i> Block</li>
-                        </ul>
-                    </div>
+<!--                    <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>-->
+<!--                    <div class="action_menu">-->
+<!--                        <ul>-->
+<!--                            <li><i class="fas fa-user-circle"></i> View profile</li>-->
+<!--                            <li><i class="fas fa-users"></i> Add to close friends</li>-->
+<!--                            <li><i class="fas fa-plus"></i> Add to group</li>-->
+<!--                            <li><i class="fas fa-ban"></i> Block</li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
                 </div>
                 <div id="message_inbox" class="card-body msg_card_body">
                     <% if (typeof messages != "undefined" && typeof user != "undefined" && typeof currentFriend != "undefined")
