@@ -49,6 +49,3 @@ Passwords coincide with usernames and [images names].
     * ```bower install``` in order to install the dependencies to the client  (moment and crypto-js).
     * ```node app.js``` in order to start the project
 
-## Docker Deployment 
-
-To do
