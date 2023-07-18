@@ -260,6 +260,92 @@ let rephrase_number_of_words = 50;
             }
         });
     }),
+
+        $(document).on("click", "#message_extend", function (event) {
+
+            event.preventDefault(); // cancel default behavior
+            console.log("Click on message_extend");
+
+            let message_value = $("#message").val();
+            if (!message_value) {
+                return;
+            }
+
+            rephrase_number_of_words = Math.min(300, rephrase_number_of_words + 10)
+            console.log(message_value)
+            console.log(rephrase_number_of_words)
+
+            $.ajax({
+                // async: false,
+                type: "POST",
+                url: "/rephrase-message",
+                data: {"message": message_value, "word_number": 1},
+                beforeSend: function () {
+                    // Show the loading overlay before sending the AJAX request
+                    $("#loading-overlay").css("display", "flex");
+                },
+                success: function (result) {
+                    console.log(result);
+                    let new_message = result.message;
+                    while (new_message.includes('\n')) {
+                        new_message = new_message.replace("\n", "");
+                    }
+
+                    $("#message").val(new_message)
+
+                },
+                error: function (e) {
+                    console.log(e.status);
+
+                },
+                complete: function () {
+                    // Hide the loading overlay after the AJAX request is complete (success or error)
+                    $("#loading-overlay").css("display", "none");
+                }
+            });
+        }),
+
+        $(document).on("click", "#message_formal", function (event) {
+
+            event.preventDefault(); // cancel default behavior
+            console.log("Click on message_formal");
+
+            let message_value = $("#message").val();
+            if (!message_value) {
+                return;
+            }
+
+            $.ajax({
+                // async: false,
+                type: "POST",
+                url: "/rephrase-message",
+                data: {"message": message_value, "word_number": -3},
+                beforeSend: function () {
+                    // Show the loading overlay before sending the AJAX request
+                    $("#loading-overlay").css("display", "flex");
+                },
+                success: function (result) {
+                    console.log(result);
+                    let new_message = result.message;
+                    while (new_message.includes('\n')) {
+                        new_message = new_message.replace("\n", "");
+                    }
+
+                    $("#message").val(new_message)
+
+                },
+                error: function (e) {
+                    console.log(e.status);
+
+                },
+                complete: function () {
+                    // Hide the loading overlay after the AJAX request is complete (success or error)
+                    $("#loading-overlay").css("display", "none");
+                }
+            });
+        }),
+
+
     // -----------------------------------------------------
 
     $("#message_send_form").submit(function (e) {

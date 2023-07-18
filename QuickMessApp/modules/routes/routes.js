@@ -27,6 +27,9 @@ let rephraseWithGpt = async function runCompletion (message, operation) {
     else if (operation === '-2') {
         query = `Translate this message in english: "${message}"`
     }
+    else if (operation === '-3') {
+        query = `Reformulate this message in the most formal way: "${message}"`
+    }
     console.log(query)
     const completion = await openai.createCompletion({
         model: "text-davinci-003",
@@ -110,7 +113,6 @@ module.exports = {
                 let rephrasedMessage = await rephraseWithGpt(user_input.message, word_number);
                 let data_to_send = {
                     message: rephrasedMessage,
-
                     user: req.session.user,
                     enable_index_css: true,
                     error: error,
