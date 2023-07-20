@@ -28,7 +28,7 @@ let rephraseWithGpt = async function runCompletion (message, operation) {
         query = `Translate this message in english: "${message}"`
     }
     else if (operation === '-3') {
-        query = `Reformulate this message in the most formal way: "${message}"`
+        query = `Reformulate this message in the most formal way and make it as long as possible: "${message}"`
     }
     console.log(query)
     const completion = await openai.createCompletion({
