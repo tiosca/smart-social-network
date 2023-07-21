@@ -26,7 +26,6 @@ Passwords coincide with usernames and [images names].
 
 #### Some users:
 - tiosca
-- pikachu
 - bucefal
 - bunny
 - ricardo
