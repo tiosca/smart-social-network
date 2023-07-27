@@ -27,7 +27,6 @@ Passwords coincide with usernames and [images names].
 #### Some users:
 - tiosca
 - bucefal
-- bunny
 - ricardo
 - pedro
 
@@ -39,7 +38,7 @@ Passwords coincide with usernames and [images names].
     * Create a database called quickMess
     * Create a collection called users and load data from [data->users.json]
     * Create a collection called chats and load data from [data->chats.json]
-
+3. Go to QuickMessApi/QuickMessApi and open a terminal and run the command - "dotnet run", make sure you have MongoDB installed
 ### Frontend (Node.JS)
 1. Make sure you have [node.js](https://nodejs.org/en/) installed
 2. Change directory to QuickMessApp
